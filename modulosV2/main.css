@@ -1,0 +1,58 @@
+
+* {box-sizing: border-box;}
+body {
+    background-color: #0F051D;
+    margin: 0;
+    color:white;
+    font-family: MabryPro-Medium, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {text-decoration: none; color: white; font-weight: 900;}
+li {list-style: none;}
+img {display: block;}
+p {font-size: large;}
+
+.contenedor { max-width: 1200px; margin: 0 auto; position: relative;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: rgb(61, 61, 61);        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(75, 75, 75);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}

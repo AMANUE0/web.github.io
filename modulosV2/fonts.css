@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'FrakenstainerDemo';
+    src: url('../Fuentes/frakenstainer/FrankenstainerDemo-lgy2Z.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+@font-face {
+    font-family: 'MabryPro-Light';
+    src: url('../Fuentes/MabryPro-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
