@@ -95,7 +95,7 @@ function seccion1(titulo, parrafo, textBotonStarted) {
     divParrafo.textContent = parrafo
     divStarted.textContent = textBotonStarted
     divStarted.href = "#"
-    botonDC.src = "../imagenes2/botonDC.png"
+    botonDC.src = "../.imagenes2/botonDC.png"
 
     tituloS1.appendChild(divTitulo)
     parrafoS1.appendChild(divParrafo)
