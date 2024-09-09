@@ -33,11 +33,7 @@ function crearApp() {
     let aINFO = document.createElement("a")
 
     // Agregamos contenido
-<<<<<<< HEAD
     imagenAPP.src = "./imagenes2/card1.jpg"
-=======
-    imagenAPP.src = "../../imagenes2/card1.jpg"
->>>>>>> 2fedb879e92935681e3bc68d18230c0ae62342f1
     aINFO.textContent = "Mas informacion";
     aINFO.href = "# "
 
@@ -57,11 +53,7 @@ function seccion1(titulo, parrafo, textBotonStarted) {
     divParrafo.textContent = parrafo
     divStarted.textContent = textBotonStarted
     divStarted.href = "#"
-<<<<<<< HEAD
-    botonDC.src = "./imagenes2/botonDC.png"
-=======
-    botonDC.src = "../../imagenes2/botonDC.png"
->>>>>>> 2fedb879e92935681e3bc68d18230c0ae62342f1
+    botonDC.src = "../imagenes2/botonDC.png"
 
     tituloS1.appendChild(divTitulo)
     parrafoS1.appendChild(divParrafo)
