@@ -44,7 +44,6 @@ section:first-child {
 }
 
 section:nth-child(2) {
-    background-color: orange;
     max-width: 600px;
     width: 600px;
     display: flex;
@@ -62,53 +61,60 @@ section:nth-child(2) {
     margin: 0 auto;
 }
 .card1, .card2, .card3 {
+    border-radius: 20px;
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: #1B1A28;
-    border: 1px solid;
 }
 
 .contenedorIMG1 {
     position: relative;
-    background-color: #3E01D8;
     width: 100%;
     height: 160px;
 }
 .contenedorIMG2 {
     position: relative;
-    background-color: #3E01D8;
     width: 100%;
     height: 160px;
 }
 .contenedorIMG3 {
     position: relative;
-    background-color: #3E01D8;
     width: 100%;
     height: 160px;
 }
 
 .appImg1 {
+    border-radius: 20px 20px 0;
     width: 100%;
     height: 100%;
 }
 .appImg2 {
+    border-radius: 20px 20px 0 0;
+
     width: 100%;
     height: 100%;
 }
 .appImg3 {
+    border-radius: 20px 20px 0 0;
     width: 100%;
     height: 100%;
 }
 
 .card1 {
+    border: 10px solid transparent;
+    box-shadow: 0 0 15px red;
     transform: translateX(50%);
 }
 .card2 {
+    border: 10px solid transparent;
 
+    box-shadow: 0 0 15px yellow;
     transform: translateX(-50%);
 }
 .card3 {
+
+    box-shadow: 0 0 15px blue;
 }
 
 
@@ -143,7 +149,6 @@ p {
     background-color: #1b1b1b;
     padding: 20px;
     border-radius: 10px;
-    color: white;
     text-align: center;
 }
 
@@ -160,8 +165,5 @@ p {
 }
 
 .masInfo {
-    position: absolute;
-    background-color: brown;
     
-    
-}
+}   
