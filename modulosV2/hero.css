@@ -102,12 +102,12 @@ section:nth-child(2) {
 }
 
 .card1 {
-    border: 10px solid transparent;
+    opacity: .5;
     box-shadow: 0 0 15px red;
     transform: translateX(50%);
 }
 .card2 {
-    border: 10px solid transparent;
+    opacity: .5;
 
     box-shadow: 0 0 15px yellow;
     transform: translateX(-50%);
@@ -146,7 +146,6 @@ p {
 
 
 .contenedorINFO1, .contenedorINFO2, .contenedorINFO3 {
-    background-color: #1b1b1b;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
