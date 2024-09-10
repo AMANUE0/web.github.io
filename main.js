@@ -18,9 +18,6 @@ function crearApp() {
     let card2 = document.getElementsByClassName("card2")[0];
     let card3 = document.getElementsByClassName("card3")[0];
 
-    
-
-
     // Creamos todo el contenido
     let contenedorIMG1 = document.createElement("div"); // agregar img por cada aplicacion
     let contenedorIMG2 = document.createElement("div"); // agregar img por cada aplicacion
@@ -68,14 +65,13 @@ function crearApp() {
     card1.appendChild(contenedorIMG1);
     card1.appendChild(contenedorINFO1);
     card1.appendChild(botonINFO1);
+
     // Agregamos hijos a contenedor card2
     card2.appendChild(contenedorIMG2);
-    card2.appendChild(appImagen2);
     card2.appendChild(contenedorINFO2);
     card2.appendChild(botonINFO2);
     // Agregamos hijos a contenedor card1
     card3.appendChild(contenedorIMG3);
-    card3.appendChild(appImagen3);
     card3.appendChild(contenedorINFO3);
     card3.appendChild(botonINFO3);
 

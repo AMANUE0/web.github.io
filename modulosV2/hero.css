@@ -54,8 +54,8 @@ section:nth-child(2) {
 
 
 .cartas {
-    display: flex;
     position: relative;
+    display: flex;
     background-color: brown;
     width: 280px;
     height: 340px;
@@ -65,64 +65,48 @@ section:nth-child(2) {
     position: absolute;
     width: 100%;
     height: 100%;
-    & img {
-        width: 100%;
-    }
+    background-color: #1B1A28;
+    border: 1px solid;
 }
 
 .contenedorIMG1 {
     position: relative;
+    background-color: #3E01D8;
     width: 100%;
     height: 160px;
-    background-color: #3E01D8;
-    & .appImg1 {
-        width: 100%;
-        height: 100%;
-    }
 }
-
 .contenedorIMG2 {
     position: relative;
+    background-color: #3E01D8;
     width: 100%;
     height: 160px;
-    background-color: #3E01D8;
-    & .appImg2 {
-        width: 100%;
-        height: 100%;
-    }
 }
-
 .contenedorIMG3 {
     position: relative;
+    background-color: #3E01D8;
     width: 100%;
     height: 160px;
-    background-color: #3E01D8;
-    & .appImg3 {
-        width: 100%;
-        height: 100%;
-    }
+}
+
+.appImg1 {
+    width: 100%;
+    height: 100%;
+}
+.appImg2 {
+    width: 100%;
+    height: 100%;
+}
+.appImg3 {
+    width: 100%;
+    height: 100%;
 }
 
 .card1 {
-    background-color: black;
-    transform: translateX(50px);
+    transform: translateX(50%);
 }
-
 .card2 {
-    background-color: blue;
-    opacity: 0;
+
+    transform: translateX(-50%);
 }
 .card3 {
-    background-color: red;
-    opacity: 0;
-    transform: translateX(-50px);
-
-}
-
-.divIMG {
-    background-color: #E800EB;
-    & img {
-        width: 100%;
-        height: 160px;
-    }
 }
