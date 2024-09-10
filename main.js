@@ -53,11 +53,11 @@ function crearApp() {
     contenedorINFO3.classList.add("contenedorINFO3");
 
     // Agregamos el contenido a los contenedores de las cartas 
-    appImagen1.src = "../imagenes2/card2.webp"
+    appImagen1.src = "imagenes2/card2.webp"
     appImagen1.alt = "Imagen carta1"
-    appImagen2.src = "../imagenes2/card1.jpg"
+    appImagen2.src = "imagenes2/card1.jpg"
     appImagen2.alt = "Imagen carta2"
-    appImagen3.src = "../imagenes2/juego1.jpg"
+    appImagen3.src = "imagenes2/juego1.jpg"
     appImagen3.alt = "Imagen carta3"
     
     contenedorIMG1.appendChild(appImagen1);
@@ -95,7 +95,7 @@ function seccion1(titulo, parrafo, textBotonStarted) {
     divParrafo.textContent = parrafo
     divStarted.textContent = textBotonStarted
     divStarted.href = "#"
-    botonDC.src = "../imagenes2/botonDC.png"
+    botonDC.src = "imagenes2/botonDC.png"
 
     tituloS1.appendChild(divTitulo)
     parrafoS1.appendChild(divParrafo)
