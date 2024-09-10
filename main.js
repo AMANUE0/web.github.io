@@ -12,72 +12,68 @@ let boton2 = document.getElementsByClassName("boton2")[0]
 // Obtenemos el contenedor de las aplicaciones
 let divCartas = document.getElementsByClassName("cartas")[0]
 
-function crearApp() {
-    // Obtenemos el contenedor donde se crearan las aplicaciones
-    let card1 = document.getElementsByClassName("card1")[0];    
-    let card2 = document.getElementsByClassName("card2")[0];
-    let card3 = document.getElementsByClassName("card3")[0];
+function crearApp(nombrec, descargasc, estadoc, imgSrc, imgAlt, cardNumber, link) {
+    // Obtenemos el contenedor de la aplicación correspondiente (card1, card2 o card3)
+    let card = document.getElementsByClassName(`card${cardNumber}`)[0];
 
     // Creamos todo el contenido
-    let contenedorIMG1 = document.createElement("div"); // agregar img por cada aplicacion
-    let contenedorIMG2 = document.createElement("div"); // agregar img por cada aplicacion
-    let contenedorIMG3 = document.createElement("div"); // agregar img por cada aplicacion
+    let contenedorIMG = document.createElement("div"); 
+    let appImagen = document.createElement("img");
+    let contenedorINFO = document.createElement("div");
 
-    let appImagen1 = document.createElement("img");
-    let appImagen2 = document.createElement("img");
-    let appImagen3 = document.createElement("img");
+    // Información que queremos mostrar
+    let informacion = {
+        nombre: nombrec,
+        descargas: descargasc,
+        estado: estadoc
+    }
 
-    let contenedorINFO1 = document.createElement("div");
-    let contenedorINFO2 = document.createElement("div");
-    let contenedorINFO3 = document.createElement("div");
+    // Función para añadir información a la tarjeta
+    function informaciondeApps(contenedorINFO, info) {
+        let nombre = document.createElement("h3");
+        nombre.classList.add("nombre")
+        nombre.innerHTML = `${info.nombre}   <span class="descargas"><span>&#128229;</span> ${info.descargas}</span>`;
 
-    let botonINFO1 = document.createElement("a");
-    let botonINFO2 = document.createElement("a");
-    let botonINFO3 = document.createElement("a");
+        
+        let estado = document.createElement("p");
+        estado.innerHTML = `STATUS <span style="color: ${info.estado === 'WORKING' ? 'green' : 'red'}">${info.estado}</span>`;
 
+        let botonDescarga = document.createElement("a");
+        botonDescarga.classList.add("masInfo")
+        botonDescarga.textContent  = "Mas informacion";
+        botonDescarga.classList.add("botonDescarga");
+
+        contenedorINFO.appendChild(nombre);
+        contenedorINFO.appendChild(estado);
+        contenedorINFO.appendChild(botonDescarga);
+    }
 
     // Asignamos clases
-    contenedorIMG1.classList.add("contenedorIMG1")
-    contenedorIMG2.classList.add("contenedorIMG2")
-    contenedorIMG3.classList.add("contenedorIMG3")
+    contenedorIMG.classList.add(`contenedorIMG${cardNumber}`);
+    appImagen.classList.add(`appImg${cardNumber}`);
+    contenedorINFO.classList.add(`contenedorINFO${cardNumber}`);
 
-    appImagen1.classList.add("appImg1");
-    appImagen2.classList.add("appImg2");
-    appImagen3.classList.add("appImg3");
+    // Agregamos la imagen
+    appImagen.src = imgSrc;
+    appImagen.alt = imgAlt;
 
-    contenedorINFO1.classList.add("contenedorINFO1");
-    contenedorINFO2.classList.add("contenedorINFO2");
-    contenedorINFO3.classList.add("contenedorINFO3");
+    contenedorIMG.appendChild(appImagen);
 
-    // Agregamos el contenido a los contenedores de las cartas 
-    appImagen1.src = "imagenes2/card2.webp"
-    appImagen1.alt = "Imagen carta1"
-    appImagen2.src = "imagenes2/card1.jpg"
-    appImagen2.alt = "Imagen carta2"
-    appImagen3.src = "imagenes2/juego1.jpg"
-    appImagen3.alt = "Imagen carta3"
-    
-    contenedorIMG1.appendChild(appImagen1);
-    contenedorIMG2.appendChild(appImagen2);
-    contenedorIMG3.appendChild(appImagen3);
+    // Llenamos la información para el contenedor
+    informaciondeApps(contenedorINFO, informacion);
 
-    // Agregamos hijos a contenedor card1
-    card1.appendChild(contenedorIMG1);
-    card1.appendChild(contenedorINFO1);
-    card1.appendChild(botonINFO1);
-
-    // Agregamos hijos a contenedor card2
-    card2.appendChild(contenedorIMG2);
-    card2.appendChild(contenedorINFO2);
-    card2.appendChild(botonINFO2);
-    // Agregamos hijos a contenedor card1
-    card3.appendChild(contenedorIMG3);
-    card3.appendChild(contenedorINFO3);
-    card3.appendChild(botonINFO3);
-
+    // Agregamos hijos al contenedor correspondiente
+    card.appendChild(contenedorIMG);
+    card.appendChild(contenedorINFO);
 }
 
-crearApp()
+// Llamadas para cada aplicación con información diferente
+crearApp("Elsify", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen carta1", 1,);
+crearApp("App2", "215.839", "NOT WORKING", "imagenes2/card1.jpg", "Imagen carta2", 2,);
+crearApp("App3", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,);
+
+
+
 
 
 function seccion1(titulo, parrafo, textBotonStarted) {
