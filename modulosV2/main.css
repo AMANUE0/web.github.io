@@ -21,14 +21,12 @@ p {font-size: large;}
     font-size: 3.5rem;
 }
 .aplicaciones-tendencia {
-    background-color: blue;
 }
 .contenedor-aplicaciones-tendencia {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
-    background-color: brown;
 }
 .ver-aplicaciones {
     box-shadow: 0 0 1px white;
@@ -43,7 +41,6 @@ p {font-size: large;}
 
 /*ESTILAMOS LA SECCION DE JUSTIFICACION, EL PORQUE USAR FYRECHANGER*/
 .Justificacion {
-    background-color: blue;
 }
 .Justificacion h2 {
     font-size: 3.5rem;
