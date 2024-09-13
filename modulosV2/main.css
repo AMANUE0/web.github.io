@@ -5,6 +5,7 @@ body {
     margin: 0;
     color:white;
     font-family: MabryPro-Medium, Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {text-decoration: none; color: white; font-weight: 900;}
@@ -13,10 +14,44 @@ img {display: block;}
 p {font-size: large;}
 
 .contenedor { max-width: 1200px; margin: 0 auto; position: relative;}
+/*ESTILAMOS LA SECCION DE APLICACIONES DE TENDENCIA*/
+.titulo-aplicaciones-tendencia {
+    color: white;   
+    text-align: center;
+    font-size: 3.5rem;
+}
+.aplicaciones-tendencia {
+    background-color: blue;
+}
+.contenedor-aplicaciones-tendencia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    background-color: brown;
+}
+.ver-aplicaciones {
+    box-shadow: 0 0 1px white;
+    border-radius: 100px;
+    padding: 20px;    
+    width: 270px;
+    text-align: center;
+    margin: 100px auto;
+    display: block;
+    background: linear-gradient(20deg, #4001D8, #EA00EB);
+}
 
-
-
-
+/*ESTILAMOS LA SECCION DE JUSTIFICACION, EL PORQUE USAR FYRECHANGER*/
+.Justificacion {
+    background-color: blue;
+}
+.Justificacion h2 {
+    font-size: 3.5rem;
+    text-align: center;
+}
+.Justificacion section {
+    background-color: #EA00EB;
+}
 
 
 

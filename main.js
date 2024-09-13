@@ -12,9 +12,9 @@ let boton2 = document.getElementsByClassName("boton2")[0]
 // Obtenemos el contenedor de las aplicaciones
 let divCartas = document.getElementsByClassName("cartas")[0]
 
-function crearApp(nombrec, descargasc, estadoc, imgSrc, imgAlt, cardNumber, link) {
+function crearApp(indiceCLase,nombrec, descargasc, estadoc, imgSrc, imgAlt, cardNumber, link) {
     // Obtenemos el contenedor de la aplicación correspondiente (card1, card2 o card3)
-    let card = document.getElementsByClassName(`card${cardNumber}`)[0];
+    let card = document.getElementsByClassName(`card${cardNumber}`)[indiceCLase];
 
     // Creamos todo el contenido
     let contenedorIMG = document.createElement("div"); 
@@ -68,11 +68,13 @@ function crearApp(nombrec, descargasc, estadoc, imgSrc, imgAlt, cardNumber, link
 }
 
 // Llamadas para cada aplicación con información diferente
-crearApp("Elsify", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen carta1", 1,);
-crearApp("App2", "215.839", "NOT WORKING", "imagenes2/card1.jpg", "Imagen carta2", 2,);
-crearApp("App3", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,);
+crearApp(0, "Elsify", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen carta1", 1,);
+crearApp(0, "App2", "215.839", "NOT WORKING", "imagenes2/card1.jpg", "Imagen carta2", 2,);
+crearApp(0, "App3", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,);
 
-
+crearApp(1, "Elsify", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen carta1", 1,);
+crearApp(1, "App2", "215.839", "NOT WORKING", "imagenes2/card1.jpg", "Imagen carta2", 2,);
+crearApp(1, "App3", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,);
 
 
 
@@ -95,7 +97,7 @@ function seccion1(titulo, parrafo, textBotonStarted) {
     boton2.appendChild(botonDC)
 }
 
-seccion1("Your Nr. 1 Mods Repository", "Explore, download, and enjoy a seamless modding journey tailored to your desires!", "GET STARTED ↗")
+seccion1('Your Nr. 1 <span class="texto-degradado">Mods Repository</span>', "Explore, download, and enjoy a seamless modding journey tailored to your desires!", "GET STARTED ↗")
 
 function opciones(opcion1, href1, opcion2, href2, opcion3, href3, opcion4, href4){
     aAplications.textContent = opcion1
