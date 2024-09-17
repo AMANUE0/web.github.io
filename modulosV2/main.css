@@ -97,6 +97,18 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;       /* roundness of the scroll thumb */
 }
 
+
+footer {
+    background-color: #120524;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+}
+footer ul li i {
+   font-size: 3rem;
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 500px) {
     .Justificacion-seccion {
