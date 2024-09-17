@@ -21,6 +21,8 @@ function crearApp(indiceCLase,nombrec, descargasc, estadoc, imgSrc, imgAlt, card
     let appImagen = document.createElement("img");
     let contenedorINFO = document.createElement("div");
 
+    contenedorINFO.classList.add("contenedorINFO");
+
     // Información que queremos mostrar
     let informacion = {
         nombre: nombrec,
@@ -39,8 +41,7 @@ function crearApp(indiceCLase,nombrec, descargasc, estadoc, imgSrc, imgAlt, card
         estado.innerHTML = `STATUS <span style="color: ${info.estado === 'WORKING' ? 'green' : 'red'}">${info.estado}</span>`;
 
         let botonDescarga = document.createElement("a");
-        botonDescarga.classList.add("masInfo")
-        botonDescarga.textContent  = "Mas informacion";
+        botonDescarga.textContent  = "More information";
         botonDescarga.classList.add("botonDescarga");
 
         contenedorINFO.appendChild(nombre);
@@ -72,9 +73,9 @@ crearApp(0, "Elsify", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen cart
 crearApp(0, "App2", "215.839", "NOT WORKING", "imagenes2/card1.jpg", "Imagen carta2", 2,);
 crearApp(0, "App3", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,);
 
-crearApp(1, "Elsify", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen carta1", 1,);
-crearApp(1, "App2", "215.839", "NOT WORKING", "imagenes2/card1.jpg", "Imagen carta2", 2,);
-crearApp(1, "App3", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,);
+crearApp(1, "Delusion", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen carta1", 1,); // Delusion  color normal
+crearApp(1, "Notir+", "215.839", "Desarrollando", "imagenes2/card1.jpg", "Imagen carta2", 2,);
+crearApp(1, "Proximamente", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,); // PROXIMAMENTE color rosa claro
 
 
 
@@ -82,37 +83,38 @@ function seccion1(titulo, parrafo, textBotonStarted) {
     let divTitulo = document.createElement("h1");
     let divParrafo = document.createElement("p");
     let divStarted = document.createElement("a");
+    let DCimage = document.createElement("a");
     let botonDC = document.createElement("img");
 
 
     divTitulo.innerHTML = titulo 
     divParrafo.textContent = parrafo
-    divStarted.textContent = textBotonStarted
-    divStarted.href = "#"
+    divStarted.innerHTML = textBotonStarted
+    divStarted.href = "/paginas/login.html"
+    DCimage.href = "https://discord.gg/nWy4TtsSgu"
     botonDC.src = "imagenes2/botonDC.png"
-
+    
     tituloS1.appendChild(divTitulo)
     parrafoS1.appendChild(divParrafo)
     boton1.appendChild(divStarted)
-    boton2.appendChild(botonDC)
+    boton2.appendChild(DCimage)
+    DCimage.appendChild(botonDC)
 }
 
-seccion1('Your Nr. 1 <span class="texto-degradado">Mods Repository</span>', "Explore, download, and enjoy a seamless modding journey tailored to your desires!", "GET STARTED ↗")
+seccion1('Your Nr. 1 <span class="texto-degradado">Mods Repository</span>', "Explore, download, and enjoy a seamless modding journey tailored to your desires!", "GET STARTED <i class='fa-solid fa-arrow-up-right-from-square'></i>")
 
-function opciones(opcion1, href1, opcion2, href2, opcion3, href3, opcion4, href4){
+function opciones(opcion1, href1, opcion2, href2, opcion3, href3){
     aAplications.textContent = opcion1
     aAplications.href = href1
     aStore.textContent = opcion2
     aStore.href = href2
     aFAQ.textContent = opcion3
     aFAQ.href = href3
-    aGetStarted.textContent = opcion4
-    aGetStarted.href = href4
 
 }
 
 
-opciones("Aplications", "https://www.frostchanger.de/applications" ,  "Store","https://www.frostchanger.de/store", "FAQ", "https://www.frostchanger.de/#uni_faq" , "Get Started", "http://127.0.0.1:5500/index.html#")
+opciones("Aplications", "https://www.frostchanger.de/applications" ,  "Store","https://www.frostchanger.de/store", "FAQ", "https://www.frostchanger.de/#uni_faq")
 
 function contenidoJustificacion () {
     let contenido1 = document.getElementsByClassName("contenido1")[0];
@@ -121,7 +123,9 @@ function contenidoJustificacion () {
     
     
     if (contenido1.innerHTML.trim() === "") {
+        contenido1.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque necessitatibus suscipit praesentium blanditiis unde, eveniet recusandae eligendi repudiandae! Optio molestiae pariatur error incidunt illum architecto quia ipsum doloremque velit nobis!"
         contenido2.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque necessitatibus suscipit praesentium blanditiis unde, eveniet recusandae eligendi repudiandae! Optio molestiae pariatur error incidunt illum architecto quia ipsum doloremque velit nobis!"
+        contenido3.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque necessitatibus suscipit praesentium blanditiis unde, eveniet recusandae eligendi repudiandae! Optio molestiae pariatur error incidunt illum architecto quia ipsum doloremque velit nobis!"
         console.log("El elemento <p> está vacío.");
     } else {
         console.log("El elemento <p> tiene contenido.");

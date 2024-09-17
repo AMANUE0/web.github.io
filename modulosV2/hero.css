@@ -68,7 +68,7 @@
 }
 
 .card2 {
-    box-shadow: 0 0 25px red;
+    box-shadow: 0 0 40px #53ba62;
 
 }
 .card3 {
@@ -113,17 +113,15 @@
 
 
 .botonDescarga {
-    margin-top: 10px;
+    margin: 5px 0;
+    box-shadow: 0 0 1px white;
+    border-radius: 100px;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #282828;
-    color: white;
-    cursor: pointer;
 }
 
 .botonDescarga:hover {
-    background-color: #404040;
+    cursor: pointer;
+    background-color: #741FF5;
 }
 
 h3 {
@@ -137,28 +135,13 @@ p {
 }
 
 
-
-.contenedorINFO1, .contenedorINFO2, .contenedorINFO3 {
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.nombre {
+.contenedorINFO {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 20px;
 }
-
-.descargas {
-    font-size: large;
-    font-weight: 100;
-}
-
-.masInfo {
-    
-}   
 
 .card1:hover, .card2:hover, .card3:hover {
     box-shadow: none;
