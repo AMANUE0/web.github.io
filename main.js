@@ -114,5 +114,35 @@ function opciones(opcion1, href1, opcion2, href2, opcion3, href3, opcion4, href4
 
 opciones("Aplications", "https://www.frostchanger.de/applications" ,  "Store","https://www.frostchanger.de/store", "FAQ", "https://www.frostchanger.de/#uni_faq" , "Get Started", "http://127.0.0.1:5500/index.html#")
 
+function contenidoJustificacion () {
+    let contenido1 = document.getElementsByClassName("contenido1")[0];
+    let contenido2 = document.getElementsByClassName("contenido2")[0];
+    let contenido3 = document.getElementsByClassName("contenido3")[0];
+    
+    
+    if (contenido1.innerHTML.trim() === "") {
+        contenido2.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque necessitatibus suscipit praesentium blanditiis unde, eveniet recusandae eligendi repudiandae! Optio molestiae pariatur error incidunt illum architecto quia ipsum doloremque velit nobis!"
+        console.log("El elemento <p> está vacío.");
+    } else {
+        console.log("El elemento <p> tiene contenido.");
+    }
 
+}
 
+contenidoJustificacion()
+
+function creandoDivicion() {
+    let divicion = document.getElementsByClassName("divicion");
+    // Creando Elementos para la divicion
+    /*let iconoCentro = document.createElement("div");
+    let izquierda = document.createElement("div");
+    let derecha = document.createElement("div");
+    // Asignando Clases
+    
+
+    divicion.appendChild(iconoCentro);
+    divicion.appendChild(izquierda);
+    divicion.appendChild(derecha);*/
+    
+    
+}

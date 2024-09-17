@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="modulosV2/main.css">
+    <link rel="stylesheet" href="modulosV2/main.css"> <!--Estilos generales de cada elemento-->
     <link rel="stylesheet" href="modulosV2/header.css">
     <link rel="stylesheet" href="modulosV2/hero.css">
     <link rel="stylesheet" href="modulosV2/fonts.css">
     <link rel="stylesheet" href="modulosV2/extras.css"> <!---Archivo donde tendremos estilos predefinidos-->
     <link rel="stylesheet" href="modulosV2/animaciones.css">
+    <link rel="stylesheet" href="modulosV2/divition.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Biblioteca de iconos para HTML-->
+    <script src="https://kit.fontawesome.com/6788e71a64.js" crossorigin="anonymous"></script>
     <title>FyreChanger</title>
 
 </head>
@@ -17,10 +20,10 @@
         <div class="logo" translate="no">FYRECHANGER</div>
         <nav>
             <ul>
-                <li><a  href="#" class="aAplications">Aplications</a></li>
-                <li><a  href="#" class="aStore">Store</a></li>
-                <li><a  href="#" class="aFAQ">FAQ</a></li>
-                <li><a  href="#" class="aGetStarted">Get Started</a></li>
+                <li><a hidden href="#" class="aAplications">Aplications</a></li>
+                <li><a hidden href="#" class="aStore">Store</a></li>
+                <li><a hidden href="#" class="aFAQ">FAQ</a></li>
+                <li><a hidden href="#" class="aGetStarted">Get Started</a></li>
             </ul>
         </nav>
         <div class="login"><a href="#">Login</a></div>
@@ -29,7 +32,7 @@
     <!--CONTENEDOR DE TODA LA PAGINA-->
     <main class="contenedor">
         <div class="hero">
-            <section>
+            <section class="hero-seccion1">
                 <div class="titulo"></div>
                 <div class="parrafo"></div>
                 <div class="boton1"></div>
@@ -37,7 +40,7 @@
             </section>
 
             <!--Seccion de las aplicacines de muestra-->
-            <section>
+            <section class="hero-seccion2">
                 <div class="cartas">
                     <article class="card1 animacion-card1"></article>
                     <article class="card2 animacion-card2"></article>
@@ -45,10 +48,11 @@
                 </div>
             </section>
         </div> <!--Termina Hero-->
+        <div class="divicion"></div>
         <section class="logotipos-destacados"></section>
 
         <section class="aplicaciones-tendencia">
-            <h2 class="titulo-aplicaciones-tendencia">🔥 TRENDING<span class="texto-degradado">APPLICATIONS</span> 🔥</h2>
+            <h2>🔥 TRENDING<span class="texto-degradado"> APPLICATIONS</span> 🔥</h2>
             <div class="contenedor-aplicaciones-tendencia">
                 <article class="card1"></article>
                 <article class="card2"></article>
@@ -56,17 +60,33 @@
             </div>
             <a href="#" class="ver-aplicaciones">View Applications</a>
         </section>
+        <div class="divicion"></div>
+
+
+
         <section class="Justificacion">
             <h2>Why <span class="texto-degradado">Choose FyreChanger</span> for Your Game Modifications?</h2>
-            <section>
-                <article></article>
-                <article></article>
-                <article></article>
+            <section class="Justificacion-seccion">
+                <article class="cuadro-1"><!--Cuadro numero 1-->
+                    <i class="fa-solid fa-heart icono-degradado"></i>
+                    <p class="contenido1"></p>
+                </article> 
+                <article class="cuadro-2"> <!--Cuadro numero 2-->
+                    <i class="fa-solid fa-shield-halved icono-degradado"></i>
+                    <p class="contenido1"></p>
+
+                </article> 
+                <article class="cuadro-3"> <!--Cuadro numero 3-->
+                    <i class="fa-solid fa-gamepad icono-degradado"></i>
+                    <p class="contenido1"></p>
+
+                </article> 
             </section>
         </section>
         <section class="guia"></section>
         <section class="team"></section>
     </main>
+
     <script src="main.js"></script>
     <footer></footer>
 </body>

@@ -3,3 +3,9 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
+.icono-degradado {
+    background: linear-gradient(#3E00FA, #C601CC, rgb(65, 49, 85) );
+    -webkit-background-clip: text;
+    color: transparent;
+}

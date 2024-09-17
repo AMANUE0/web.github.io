@@ -8,7 +8,7 @@ header {
     max-width: 1200px;
     height: 100px;
     margin: 0 auto;
-    z-index: 1; /* Aseguramos que el header esté por encima de otros elementos */
+    z-index: 1000000; /* Aseguramos que el header esté por encima de otros elementos */
     font-weight: 700;
 }
 

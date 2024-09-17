@@ -7,7 +7,7 @@
     margin-top: 70px;
 }
 
-section:first-child {
+.hero-seccion1 {
     position: relative;
     max-width: 600px;
     display: flex;
@@ -34,15 +34,15 @@ section:first-child {
 }
 
 .boton2 {
-    display: flex;
     & img {
         margin-top: 20px;
         width: 300px;
+        height: 80px;
         border-radius: 10px;
     }
 }
 
-section:nth-child(2) {
+.hero-seccion2 {
     max-width: 600px;
     align-items: center;
     width: 800px;
@@ -61,9 +61,20 @@ section:nth-child(2) {
     width: 280px;
     height: 350px;
     background-color: #1B1A28;
-    transition: transform .5s;
+    transition: .5s;
+}
+.card1 {
+    box-shadow: 0 0 25px yellow;
 }
 
+.card2 {
+    box-shadow: 0 0 25px red;
+
+}
+.card3 {
+    box-shadow: 0 0 25px cyan;
+    
+}
 .contenedorIMG1 {
     position: relative;
     width: 100%;
@@ -150,11 +161,38 @@ p {
 }   
 
 .card1:hover, .card2:hover, .card3:hover {
+    box-shadow: none;
     transform: scale(1.1);
 }
 
+@media (max-width: 900px)  {
+    .hero {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero section { /*Configuracion global de las secciones del hero*/
+        margin: 10px auto 0;
+    }
+    .hero section:first-child {
+        text-align: center;
+        align-items: center;
+        
+    }
+    .hero section:nth-child(2) {
+        width: 100vw;
+    }
+}
 @media (max-width: 500px) 
 {
+    .contenedor {
+        width: 100vw;
+    }
+    .contenedor section h2 {
+        font-size: 2rem;
+        margin: 0 auto;
+    }
     .hero {
         margin: 0;
         display: flex;

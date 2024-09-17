@@ -13,13 +13,9 @@ li {list-style: none;}
 img {display: block;}
 p {font-size: large;}
 
-.contenedor { max-width: 1200px; margin: 0 auto; position: relative;}
+.contenedor { max-width: 1200px; margin: 0 auto; position: relative; overflow: hidden;}
 /*ESTILAMOS LA SECCION DE APLICACIONES DE TENDENCIA*/
-.titulo-aplicaciones-tendencia {
-    color: white;   
-    text-align: center;
-    font-size: 3.5rem;
-}
+
 .aplicaciones-tendencia {
 }
 .contenedor-aplicaciones-tendencia {
@@ -40,40 +36,52 @@ p {font-size: large;}
 }
 
 /*ESTILAMOS LA SECCION DE JUSTIFICACION, EL PORQUE USAR FYRECHANGER*/
-.Justificacion {
-}
-.Justificacion h2 {
+
+.contenedor .Justificacion h2:first-child {
     font-size: 3.5rem;
     text-align: center;
 }
-.Justificacion section {
-    background-color: #EA00EB;
+.Justificacion {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+.Justificacion-seccion { /*Estilos globale para las secciones de esta parte*/
+    position: relative;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
 }
 
+.cuadro-1, .cuadro-2, .cuadro-3 {
+    height: 80%;
+    min-width: 300px;
+    margin: 0 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 20px;
+    & p {margin: 20px;}
+    
+}
+.cuadro-1 {
+    align-self: flex-start;
+    & i {font-size: 3rem; margin: 20px;}
+}
+.cuadro-2 {
+    align-self: center;
+    & i {font-size: 3rem; margin: 20px;}
 
+}
 
+.cuadro-3 {
+    align-self: self-end;
+    & i {font-size: 3rem; margin: 20px;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 body::-webkit-scrollbar {
@@ -88,3 +96,12 @@ body::-webkit-scrollbar-thumb {
     background-color: rgb(75, 75, 75);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
 }
+
+/*MEDIA QUERIES*/
+@media (max-width: 500px) {
+    .Justificacion-seccion {
+        flex-direction: column;
+        & .cuadro-1, .cuadro-2, .cuadro-3{ margin: 20px;}
+    }
+}
+    
