@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/light-theme/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Biblioteca de iconos para HTML-->
+    <script src="https://kit.fontawesome.com/6788e71a64.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="CSS/light-theme/productos.css">
+    <title>Products</title>
+    <style>
+        
+        input {
+            border-radius: 20px;
+            border: 1px solid #298DFD;
+            width: auto;
+            padding: 10px;
+            outline: none;
+            transition: .5s;
+        }
+        
+        .contenedor-busqueda {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .barra-busqueda {
+            padding: 10px 40px 10px 10px; /* Espacio para el ícono */
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        .fa-magnifying-glass {
+            position: absolute;
+            right: 10px;  /* Posición del ícono dentro del input */
+            color: #888;
+            pointer-events: none; /* Para que el icono no interfiera con el clic en el input */
+        }
+        
+        
+        input:focus {
+            width: 300px;
+            
+        }
+            </style>
+</head>
+<body>
+    <header style="">
+        <a class="logo" translate="no" href="index.html">NORTI MODS</a>
+        <nav>
+            <ul>
+                <li>
+                    <div class="contenedor-busqueda">
+                        <input type="text" class="barra-busqueda" placeholder="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <a class="login" href="login.html">Login</a>
+        <button class="tema"><i class="fa-solid fa-moon"></i></button>
+
+    </header>
+
+
+    <main id="contenedor">
+        
+        <section class="productos"></section>
+    </main>
+    <script src="JS/productos.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none; 
+}
+body {
+    background-color: #1a1a1a;
+}
+
+/*HEADER*/
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    max-width: 1400px;
+    margin: 0 auto  ;
+    font-weight: 700;
+    
+    & ul { display: flex; }
+    & li { margin: 0 40px; list-style: none;}
+    & a { transition: .5s;}
+    & .tema { font-size: x-large; }    
+}
+
+.tema:hover { font-size: xx-large; }
+.aAplications:hover, .aStore:hover, .aFAQ:hover, .logo:hover{
+    font-size: large;
+}
+
+.login {
+    border-radius: 100px;
+    padding: 15px 25px;
+    box-shadow: 0 0 2px;
+    &:hover { cursor: pointer; background-color: #741FF5; }
+}
+
+/*CONTENEDOR*/
+.contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*HERO*/
+.hero {
+    background-color: brown;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.titulo-hero {
+    background-color: blue;
+    font-size: 4rem;
+    margin: 0 auto;
+}
+
+.boton-hero {
+    background: linear-gradient(90deg, #6201D5, #9E01D2, #D401E4);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: .5rem 3rem;
+    border-radius: 100px;
+}

@@ -3,68 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="modulosV2/main.css"> <!--Estilos generales de cada elemento-->
-    <link rel="stylesheet" href="modulosV2/header.css">
-    <link rel="stylesheet" href="modulosV2/hero.css">
-    <link rel="stylesheet" href="modulosV2/fonts.css">
-    <link rel="stylesheet" href="modulosV2/extras.css"> <!---Archivo donde tendremos estilos predefinidos-->
-    <link rel="stylesheet" href="modulosV2/animaciones.css">
-    <link rel="stylesheet" href="modulosV2/divition.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Biblioteca de iconos para HTML-->
+    <link rel="stylesheet" href="CSS/light-theme/main.css"> <!--Estilos generales de cada elemento-->
+    <link rel="stylesheet" href="CSS/light-theme/header.css">
+    <link rel="stylesheet" href="CSS/light-theme/equipo.css">
+    <link rel="stylesheet" href="CSS/modulosV2/hero.css">
+    <link rel="stylesheet" href="CSS/modulosV2/divition.css">
+    <link rel="stylesheet" href="CSS/modulosV2/fonts.css">
+    <link rel="stylesheet" href="CSS/modulosV2/extras.css"> <!---Archivo donde tendremos estilos predefinidos-->
+    <link rel="stylesheet" href="CSS/modulosV2/divition.css">
+    <link rel="stylesheet" href="CSS/modulosV2/animaciones.css">
+    <!--<link rel="stylesheet" href="CSS/modulosV2/animaciones.css">-->
+    <link rel="stylesheet" href="CSS/modulosV2/cards.css">
+    <!--Bibliotecas-->
+    <<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Biblioteca de iconos para HTML-->
     <script src="https://kit.fontawesome.com/6788e71a64.js" crossorigin="anonymous"></script>
     <title>NORTI MODS</title>
 
 </head>
 <body>
     <header>
-        <div class="logo" translate="no">NORTI MODS</div>
+        
+        <a class="logo" translate="no">NORTI MODS</a>
         <nav>
             <ul>
-                <li><a  href="#" class="aAplications">Aplications</a></li>
-                <li><a  href="#" class="aStore">Store</a></li>
+                <li><a  href="productos.html" class="aAplications">Aplications</a></li>
                 <li><a  href="#" class="aFAQ">FAQ</a></li> <!--Derechos y servicios-->
             </ul>
         </nav>
-        <div class="login"><a href="#">Login</a></div>
+        <a class="login" href="login.html">Login</a>
+        <button class="tema"><i class="fa-solid fa-moon"></i></button>
     </header>
 
     <!--CONTENEDOR DE TODA LA PAGINA-->
     <main class="contenedor">
         <div class="hero">
+            
+            
             <section class="hero-seccion1">
                 <div class="titulo"></div>
-                <div class="parrafo"></div>
-                <div class="boton1"></div>
-                <div class="boton2"></div>
             </section>
 
             <!--Seccion de las aplicacines de muestra-->
             <section class="hero-seccion2">
-                <div class="cartas">
-                    <article class="card1 animacion-card1"></article>
-                    <article class="card2 animacion-card2"></article>
-                    <article class="card3 animacion-card3"></article>
+                <div class="cartas arribaAbajo">
+                    <div class="app1">
+                        <article class="card1 "></article>
+                        <article>
+                            
+                        </article>
+                    </div>
+                    <div class="app2">
+                        <article class="card2 "></article>
+                        
+                        
+                    </div>
+                    <div class="app3">
+                        <article class="card3 "></article>
+                        
+                        
+                    </div>
                 </div>
             </section>
+            <div class="boton1"></div>
+            
         </div> <!--Termina Hero-->
-        <div class="divicion"></div>
-        <section class="logotipos-destacados"></section>
 
+        
+        <section class="logotipos-destacados "></section>
+        
         <section class="aplicaciones-tendencia">
-            <h2>TRENDING<span class="texto-degradado"> APPLICATIONS</span></h2>
+
+
+            <div class="divicion">
+                <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 210" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="#0099FF" offset="0%"></stop><stop stop-color="#0099FF" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,63L26.7,52.5C53.3,42,107,21,160,28C213.3,35,267,70,320,80.5C373.3,91,427,77,480,63C533.3,49,587,35,640,38.5C693.3,42,747,63,800,70C853.3,77,907,70,960,63C1013.3,56,1067,49,1120,42C1173.3,35,1227,28,1280,42C1333.3,56,1387,91,1440,112C1493.3,133,1547,140,1600,126C1653.3,112,1707,77,1760,59.5C1813.3,42,1867,42,1920,49C1973.3,56,2027,70,2080,87.5C2133.3,105,2187,126,2240,143.5C2293.3,161,2347,175,2400,175C2453.3,175,2507,161,2560,143.5C2613.3,126,2667,105,2720,105C2773.3,105,2827,126,2880,126C2933.3,126,2987,105,3040,94.5C3093.3,84,3147,84,3200,87.5C3253.3,91,3307,98,3360,87.5C3413.3,77,3467,49,3520,49C3573.3,49,3627,77,3680,84C3733.3,91,3787,77,3813,70L3840,63L3840,210L3813.3,210C3786.7,210,3733,210,3680,210C3626.7,210,3573,210,3520,210C3466.7,210,3413,210,3360,210C3306.7,210,3253,210,3200,210C3146.7,210,3093,210,3040,210C2986.7,210,2933,210,2880,210C2826.7,210,2773,210,2720,210C2666.7,210,2613,210,2560,210C2506.7,210,2453,210,2400,210C2346.7,210,2293,210,2240,210C2186.7,210,2133,210,2080,210C2026.7,210,1973,210,1920,210C1866.7,210,1813,210,1760,210C1706.7,210,1653,210,1600,210C1546.7,210,1493,210,1440,210C1386.7,210,1333,210,1280,210C1226.7,210,1173,210,1120,210C1066.7,210,1013,210,960,210C906.7,210,853,210,800,210C746.7,210,693,210,640,210C586.7,210,533,210,480,210C426.7,210,373,210,320,210C266.7,210,213,210,160,210C106.7,210,53,210,27,210L0,210Z"></path></svg>
+            </div>
+
+
+            <h2 class="titulo-aplicaciones-tendencia"></h2>
             <div class="contenedor-aplicaciones-tendencia">
                 <article class="card1"></article>
                 <article class="card2"></article>
                 <article class="card3"></article>    
             </div>
-            <a href="#" class="ver-aplicaciones">View Applications <i class='fa-solid fa-arrow-up-right-from-square'></i></a>
-            
+
+            <a href="#" class="ver-aplicaciones"></i></a>
+
+            <div class="divicionTerminada">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L48,224C96,192,192,128,288,133.3C384,139,480,213,576,245.3C672,277,768,267,864,250.7C960,235,1056,213,1152,218.7C1248,224,1344,256,1392,272L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            </div>
+
         </section>
-        <div class="divicion"></div>
-
-
-
+                
+        
         <section class="Justificacion">
+
             <h2>Why <span class="texto-degradado">Choose Norti Mods</span> for Your Game Modifications?</h2>
             <section class="Justificacion-seccion">
                 <article class="cuadro-1"><!--Cuadro numero 1--> <!-- Resumir cuenta con nuestros mods, sin virus -->
@@ -83,40 +115,32 @@
                 </article> 
             </section>
         </section>
+
+
         <!--Team-->
-        <section class="guia">
-            <h2>How to use <span class="texto-degradado">Norti Mods?</span></h2>
-            <!--Paso 1-->
-            <article class="paso1">
-                <img src="./imagenes2/card2.webp" alt="Imagen del paso 1">
-                <h3></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi consectetur enim delectus reprehenderit nihil, eveniet laudantium sit ullam perferendis quam officia iste, numquam labore dolore optio sed veniam nesciunt?</p>
-            </article>
-            <!--Paso 2-->
-            <article class="paso2">
-                <img src="./imagenes2/hero.jpg" alt="Imagen del paso 2">
-                <h3></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi consectetur enim delectus reprehenderit nihil, eveniet laudantium sit ullam perferendis quam officia iste, numquam labore dolore optio sed veniam nesciunt?</p>
+        <div class="divicion"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5000ca" fill-opacity="1" d="M0,288L80,288C160,288,320,288,480,245.3C640,203,800,117,960,74.7C1120,32,1280,32,1360,32L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        </div>
 
-            </article>
-            <!--Paso 3-->
-            <article class="paso3">
-                <img src="./imagenes2/hero.webp" alt="Imagen del paso 3">
-                <h3></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi consectetur enim delectus reprehenderit nihil, eveniet laudantium sit ullam perferendis quam officia iste, numquam labore dolore optio sed veniam nesciunt?</p>
-
-            </article>
+        <section class="equipo">
+            <h2 id="titulo-equipo">Meet our Team</h2>
+            <div class="contenedorEquipo"></div>
         </section>
-        <section class="team"></section>
-    </main>
+        <section class=""></section>
+        <div class="divicionTerminada">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5000ca" fill-opacity="1" d="M0,32L30,80C60,128,120,224,180,240C240,256,300,192,360,176C420,160,480,192,540,192C600,192,660,160,720,138.7C780,117,840,107,900,106.7C960,107,1020,117,1080,122.7C1140,128,1200,128,1260,133.3C1320,139,1380,149,1410,154.7L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+        </div>
 
-    <script src="main.js"></script>
+    </main>
     <footer>
-        <ul>
-            <li><a href="#"><i class="fa-brands fa-discord texto-degradado"></i></a></li>
-            <li><p>©️ FyreChanger Derechos reservados</p></li>
+        <ul class="footer-iconos">
+            <li><a href=""><i class="fa-brands fa-discord"></i></li></a>
+            <li><a href=""><i class="fa-solid fa-house"></i></li></a>
         </ul>
+        <p>Copyright © 2024-2026 Nothir Mods</p>
     </footer>
+    <script src="JS/main.js"></script>
+    
 </body>
 </html>
 

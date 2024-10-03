@@ -65,29 +65,25 @@
     }
     50% {
         position: absolute;
-
         opacity: .5;
         z-index: 1;
         transform: translateX(-40%);
     }
     60% {
         position: absolute;
-
-     opacity: .5;   
-     z-index: 1;
-     transform: translateX(40%);
+         opacity: .5;   
+        z-index: 1;
+        transform: translateX(40%);
    }
     60% {
      opacity: .5;   
      position: absolute;
-
      z-index: 1;
      transform: translateX(40%);
     }
     80% {
         opacity: 1;
         position: absolute;
-
         z-index: 2;
         transform: translateX(0);
     }
@@ -95,29 +91,62 @@
         opacity: 1;
         z-index: 2;
         position: absolute;
-
         transform: translateX(0);
     }
-    
     100% {
         opacity: .5;
         position: absolute;
-
         z-index: 1;
         transform: translateX(-40%);
     }
-    
 }.animacion-card1 {
     animation: card1 10s infinite both;    
 }
 .animacion-card2 {
     animation: card2 10s infinite both;    
-
 }
 .animacion-card3 {
     animation: card3 infinite both;    
 
 }
 
-/*SECCION DE MEDIA QUERIES*/
+@keyframes show1 {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes show2 {
+    0% {
+        transform: scale(0);
+    }
+    100% {        transform: scale(1);
+    }
+}
+.show1 {
+    animation: show1 1s;
+}
+.show2 {
+    animation: show2 1ms both;
+    animation-timeline: scroll(root) ;
+}
+
+
+@keyframes arribaAbajo {
+    0% {
+        transform: translateY(5px);
+    }
+
+    50% {transform: translateY(-10px);}
+
+    100% {transform: translateY(5px);}
+}
+
+.arribaAbajo {
+    animation: arribaAbajo 5s infinite;
+}

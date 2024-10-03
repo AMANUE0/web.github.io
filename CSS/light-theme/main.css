@@ -1,11 +1,10 @@
 
-* {box-sizing: border-box;}
+* {box-sizing: border-box; }
 body {
-    background-color: #0F051D;
+    background-color: white;
     margin: 0;
-    color:white;
+    color:black;
     font-family: MabryPro-Medium, Verdana, Geneva, Tahoma, sans-serif;
-    scroll-behavior: smooth;
 }
 
 a {text-decoration: none; color: white; font-weight: 900;}
@@ -17,6 +16,8 @@ p {font-size: large;}
 /*ESTILAMOS LA SECCION DE APLICACIONES DE TENDENCIA*/
 
 .aplicaciones-tendencia {
+    background-color: #0099FF;
+    margin: 0;
 }
 .contenedor-aplicaciones-tendencia {
     display: flex;
@@ -30,7 +31,7 @@ p {font-size: large;}
     padding: 20px;    
     width: 270px;
     text-align: center;
-    margin: 100px auto;
+    margin: 100px auto 0;
     display: block;
     background: linear-gradient(20deg, #4001D8, #EA00EB);
 }
@@ -41,8 +42,22 @@ p {font-size: large;}
     font-size: 3.5rem;
     text-align: center;
 }
+svg {
+    display: block;
+    margin: 0; 
+    border: 0;   
+    box-shadow: 0;
+}
+
+
+.divicion, .divicionTerminada {
+    overflow: hidden;
+    background-color: white;
+}
+
 .aplicaciones-tendencia h2 { 
     text-align: center;
+    margin: 0;
     font-size: 2.5rem;
     padding-bottom: 100px;
 }
@@ -54,57 +69,67 @@ p {font-size: large;}
 }
 .Justificacion-seccion { /*Estilos globale para las secciones de esta parte*/
     position: relative;
+    display: flex;
     width: 100%;
     height: 800px;
-    display: flex;
     justify-content: space-between;
 }
 
-.cuadro-1, .cuadro-2, .cuadro-3 {
-    height: 80%;
-    min-width: 300px;
-    margin: 0 30px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid white;
-    border-radius: 20px;
-    & p {margin: 20px; font-size: 1.5rem;}
     
+.cuadro-1, .cuadro-2, .cuadro-3 {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    margin: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    color: black;
+    & p{margin: 15px;}
+    & i {font-size: 4rem; margin: 40px auto;}
 }
 .cuadro-1 {
     align-self: flex-start;
-    & i {font-size: 3rem; margin: 20px;}
 }
 .cuadro-2 {
+
     align-self: center;
-    & i {font-size: 3rem; margin: 20px;}
 
 }
 
 .cuadro-3 {
+
     align-self: self-end;
-    & i {font-size: 3rem; margin: 20px;}
-
-}
-
-.guia {
-    background-color: brown;
-    & h2 {text-align: center; font-size: 3.5rem; background-color: blue;}
-}
-.paso1, .paso2, .paso3 {
-    display: flex;
     
+
 }
+
 footer {
-    background-color: #120524;
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 200px;
+    height: 100px;
+    margin: 50px 0 0 0;
+    align-items: center;
+    font-weight: 900;
+    text-align: center;
+    & p {
+        font-size: 1rem;
+    }
 }
-footer ul li i {
-   font-size: 3rem;
+.footer-iconos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    & i {color: black; font-size: 1.4rem;}
+}
+.footer-texto {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    & a {
+        color: black;
+    }
+    
 }
 
 
@@ -123,10 +148,20 @@ body::-webkit-scrollbar-thumb {
 
 
 /*MEDIA QUERIES*/
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .Justificacion-seccion {
+        position: relative;
+        display: flex;
         flex-direction: column;
-        & .cuadro-1, .cuadro-2, .cuadro-3{ margin: 20px;}
+        width: 100%;
+        height: auto;
+    }
+    .cuadro-1, .cuadro-2, .cuadro-3 {
+        text-align: center;
+    }
+    .contenedor .Justificacion h2:first-child {
+        font-size: 2rem;
+        text-align: center;
     }
 }
-    
+

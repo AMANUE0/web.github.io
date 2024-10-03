@@ -9,3 +9,10 @@
     -webkit-background-clip: text;
     color: transparent;
 }
+
+.texto-degradado-celeste {
+    background: linear-gradient(45deg, #005791, rgb(135, 0, 153), gray );
+    -webkit-background-clip: text;
+    color: transparent;
+}
+

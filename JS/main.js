@@ -1,3 +1,7 @@
+let iconos = {
+    gamepad:'<i class="fa-solid fa-gamepad"></i>'
+}
+
 let aAplications = document.getElementsByClassName("aAplications")[0];
 let aStore = document.getElementsByClassName("aStore")[0];
 let aFAQ= document.getElementsByClassName("aFAQ")[0];
@@ -42,6 +46,7 @@ function crearApp(indiceCLase,nombrec, descargasc, estadoc, imgSrc, imgAlt, card
 
         let botonDescarga = document.createElement("a");
         botonDescarga.textContent  = "More information";
+        botonDescarga.href = "info-aplicacion.html";
         botonDescarga.classList.add("botonDescarga");
 
         contenedorINFO.appendChild(nombre);
@@ -69,54 +74,60 @@ function crearApp(indiceCLase,nombrec, descargasc, estadoc, imgSrc, imgAlt, card
 }
 
 // Llamadas para cada aplicación con información diferente
-crearApp(0, "Elsify", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen carta1", 1,);
-crearApp(0, "App2", "215.839", "NOT WORKING", "imagenes2/card1.jpg", "Imagen carta2", 2,);
-crearApp(0, "App3", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,);
 
-crearApp(1, "Delusion", "374.657", "WORKING", "imagenes2/card2.webp", "Imagen carta1", 1,); // Delusion  color normal
-crearApp(1, "Notir+", "215.839", "Desarrollando", "imagenes2/card1.jpg", "Imagen carta2", 2,);
-crearApp(1, "Proximamente", "142.467", "WORKING", "imagenes2/juego1.jpg", "Imagen carta3", 3,); // PROXIMAMENTE color rosa claro
+crearApp(0, "Elsify", "374.657", "WORKING", "imagenes/card2.webp", "Imagen carta1", 1,);
+crearApp(0, "App2", "215.839", "NOT WORKING", "imagenes/hero.jpg", "Imagen carta2", 2,);
+crearApp(0, "App3", "142.467", "WORKING", "imagenes/juego1.jpg", "Imagen carta3", 3,);
+
+crearApp(1, "Delusion", "374.657", "WORKING", "imagenes/card2.webp", "Imagen carta1", 1,); // Delusion  color normal
+crearApp(1, "Notir+", "215.839", "Desarrollando", "imagenes/hero.jpg", "Imagen carta2", 2,);
+crearApp(1, "SOON", "142.467", "WORKING", "imagenes/juego1.jpg", "Imagen carta3", 3,); // PROXIMAMENTE color rosa claro
 
 
 
-function seccion1(titulo, parrafo, textBotonStarted) {
+function seccion1(titulo,textBotonStarted) {
     let divTitulo = document.createElement("h1");
-    let divParrafo = document.createElement("p");
     let divStarted = document.createElement("a");
     let DCimage = document.createElement("a");
     let botonDC = document.createElement("img");
 
 
     divTitulo.innerHTML = titulo 
-    divParrafo.textContent = parrafo
     divStarted.innerHTML = textBotonStarted
-    divStarted.href = "/paginas/login.html"
+    divStarted.href = "./login.html"
     DCimage.href = "https://discord.gg/nWy4TtsSgu"
-    botonDC.src = "imagenes2/botonDC.png"
+    botonDC.src = "imagenes/botonDC.png"
     
     tituloS1.appendChild(divTitulo)
-    parrafoS1.appendChild(divParrafo)
     boton1.appendChild(divStarted)
-    boton2.appendChild(DCimage)
+    //boton2.appendChild(DCimage) Momentaniamente 
     DCimage.appendChild(botonDC)
 }
 
-seccion1('Your Nr. 1 <span class="texto-degradado">Mods Repository</span>', "Explore, download, and enjoy a seamless modding journey tailored to your desires!", "GET STARTED <i class='fa-solid fa-arrow-up-right-from-square'></i>")
+seccion1('Your Nr. 1 <span class="texto-degradado">Mods Repository</span>', "GET STARTED <i class='fa-solid fa-arrow-up-right-from-square'></i>")
 
-function opciones(opcion1, href1, opcion2, href2, opcion3, href3){
-    aAplications.textContent = opcion1
-    aAplications.href = href1
-    aStore.textContent = opcion2
-    aStore.href = href2
-    aFAQ.textContent = opcion3
-    aFAQ.href = href3
 
+// Aplicaciones de tendencia
+function aplicacionesTendencia(titulo, hrefBoton, textoBoton) { 
+    let ETitulo = document.getElementsByClassName("titulo-aplicaciones-tendencia")[0];
+    let EBoton = document.getElementsByClassName("ver-aplicaciones")[0];
+    // Agregando contenido a elementos
+    ETitulo.innerHTML = titulo;
+    EBoton.innerHTML = textoBoton;
+    EBoton.href = hrefBoton;
 }
 
+aplicacionesTendencia("TREDING <span class='texto-degradado'>APLICATIONS</span>", "productos.html", "View Aplications <i class='fa-solid fa-arrow-up-right-from-square'>");
 
-opciones("Aplications", "https://www.frostchanger.de/applications" ,  "Store","https://www.frostchanger.de/store", "FAQ", "https://www.frostchanger.de/#uni_faq")
+
+
 
 function contenidoJustificacion () {
+    // Titulo 
+    let tituloJustificacion = document.createElement("h2");
+    tituloJustificacion.classList.add("tituloJustificacion");
+            
+    tituloJustificacion.innerHTML = '<span class="texto-degradado">Norti Mods?</span>'
     let contenido1 = document.getElementsByClassName("contenido1")[0];
     let contenido2 = document.getElementsByClassName("contenido2")[0];
     let contenido3 = document.getElementsByClassName("contenido3")[0];
@@ -135,18 +146,32 @@ function contenidoJustificacion () {
 
 contenidoJustificacion()
 
-function creandoDivicion() {
-    let divicion = document.getElementsByClassName("divicion");
-    // Creando Elementos para la divicion
-    /*let iconoCentro = document.createElement("div");
-    let izquierda = document.createElement("div");
-    let derecha = document.createElement("div");
-    // Asignando Clases
-    
+function equipo (nombreI, imagenI) {
+    let contenedorEquipo = document.getElementsByClassName("equipo")[0];
+    let contenedorIntegrante = document.createElement("artcle");
+    let contenedorImagen = document.createElement("div");
 
-    divicion.appendChild(iconoCentro);
-    divicion.appendChild(izquierda);
-    divicion.appendChild(derecha);*/
-    
-    
-}
+    let imagen = document.createElement("img")
+    let nombre = document.createElement("h3");
+
+    imagen.src= imagenI;
+    imagen.alt = "Imagen de intefrante";
+
+    nombre.innerHTML = nombreI;
+
+
+    contenedorIntegrante.classList.add("contenedor-integrante");
+    imagen.classList.add("imagenEquipo");
+    contenedorImagen.classList.add("contenedorImagen");
+    nombre.classList.add("nombreEquipo");
+
+    contenedorImagen.appendChild(imagen);
+    contenedorIntegrante.appendChild(contenedorImagen);
+    contenedorIntegrante.appendChild(nombre);
+
+    contenedorEquipo.appendChild(contenedorIntegrante);
+};
+
+equipo("NORIs", "imagenes/card1.jpg");
+equipo(`Manuel ${iconos.gamepad}`, "/imagenes/logo.png");
+equipo("Alexander", "/imagenes/logo.png");

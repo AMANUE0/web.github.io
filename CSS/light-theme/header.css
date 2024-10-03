@@ -1,0 +1,73 @@
+header {
+    background-color: white;
+    color: black;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 1000000; /* Aseguramos que el header esté por encima de otros elementos */
+    font-weight: 700;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.5s ease, transform 0.5s ease; /* Animar color y tamaño */
+}
+
+header a:hover {
+    color: gray;
+    transform: scale(1.2); /* Aumenta el tamaño suavemente */
+}
+
+.login {
+    color: black;
+    padding: 15px 20px;
+    box-shadow: 0 0 2px;
+    border-radius: 100px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Añadir transición para el fondo y sombra */
+}
+
+.login:hover {
+    color: black;
+    background-color: #741FF5;
+}
+
+.tema {
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0;
+    font-size: 2.5rem;
+    transition: transform 0.5s ease, color 0.5s ease; /* Añadir transición para transformación y color */
+}
+
+.tema:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Suavizar el aumento de tamaño */
+    color: black;
+}
+
+.logo {
+    transition: transform 0.5s ease; /* Suavizar la transición al hacer hover en el logo */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el logo al hacer hover */
+    cursor: pointer;
+}
+
+
