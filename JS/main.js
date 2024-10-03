@@ -172,6 +172,6 @@ function equipo (nombreI, imagenI) {
     contenedorEquipo.appendChild(contenedorIntegrante);
 };
 
-equipo("NORIs", "imagenes/card1.jpg");
-equipo(`Manuel ${iconos.gamepad}`, "/imagenes/logo.png");
-equipo("Alexander", "/imagenes/logo.png");
+equipo("NORIs", "imagenescard1.jpg");
+equipo(`Manuel ${iconos.gamepad}`, "imagenes/logo.png");
+equipo("Alexander", "imagenes/logo.png");
