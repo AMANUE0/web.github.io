@@ -37,12 +37,13 @@ header {
     flex-direction: column;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #3f75ff;
+    font-weight: 900;
+    color: black; /*3f75ff;*/
+    text-decoration: none;
     margin: 5px auto;
 }
 .imagenProducto {
     border-radius: 5px 5px 0 0;
-    border: 1px solid #298DFD;
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -57,7 +58,7 @@ header {
 
 }
 .descripcionProducto {
-    margin: 2px 10px;
+    margin: 5px 10px;
 
 }
 .precioProducto {
@@ -73,4 +74,45 @@ header {
     text-decoration: none;
     font-weight: 900;
 
+}
+ 
+input {
+    border-radius: 20px;
+    border: 1px solid #298DFD;
+    width: auto;
+    padding: 10px;
+    outline: none;
+    transition: .5s;
+}
+
+.contenedorNombre_precio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.contenedor-busqueda {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.barra-busqueda {
+    padding: 10px 40px 10px 10px; /* Espacio para el ícono */
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    right: 10px;  /* Posición del ícono dentro del input */
+    color: #888;
+    pointer-events: none; /* Para que el icono no interfiera con el clic en el input */
+}
+
+
+input:focus {
+    width: 300px;
+    
 }

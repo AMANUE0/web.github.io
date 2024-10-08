@@ -1,12 +1,12 @@
-function crearProducto(imagen, nombre, juego,  descripcion,precio ,bootntexto, urlProducto) {
+function crearProducto(imagen, nombre, juego, descripcion, precio , urlProducto) {
     let contenedorPadre = document.getElementsByClassName("productos") [0];
-    let contenedorProducto = document.createElement("article");
+    let contenedorProducto = document.createElement("a");
     let imagenProducto = document.createElement("img");
+    let contenedorNombre_precio = document.createElement("div");
     let nombreProducto = document.createElement("h3");
     let juegoDelProducto = document.createElement("h4");
     let descripcionProducto = document.createElement("p");
     let precioProducto = document.createElement("span");
-    let botonnProducto = document.createElement("a");
 
     
     
@@ -16,7 +16,7 @@ function crearProducto(imagen, nombre, juego,  descripcion,precio ,bootntexto, u
     juegoDelProducto.classList.add("juegoProducto");
     descripcionProducto.classList.add("descripcionProducto");
     precioProducto.classList.add("precioProducto");
-    botonnProducto.classList.add("botonProducto");
+    contenedorNombre_precio.classList.add("contenedorNombre_precio");
 
     imagenProducto.src = imagen;
     imagenProducto.alt = "Imagen del producto";
@@ -24,15 +24,14 @@ function crearProducto(imagen, nombre, juego,  descripcion,precio ,bootntexto, u
     juegoDelProducto.textContent = juego;
     descripcionProducto.textContent = descripcion;
     precioProducto.textContent = precio
-    botonnProducto.textContent = bootntexto;
-    botonnProducto.href = urlProducto;
-
+    contenedorProducto.href = urlProducto;
+    
+    contenedorNombre_precio.appendChild(nombreProducto);
+    contenedorNombre_precio.appendChild(precioProducto);
     contenedorProducto.appendChild(imagenProducto);
-    contenedorProducto.appendChild(nombreProducto);
+    contenedorProducto.appendChild(contenedorNombre_precio);
     contenedorProducto.appendChild(juegoDelProducto);
     contenedorProducto.appendChild(descripcionProducto);
-    contenedorProducto.appendChild(precioProducto);
-    contenedorProducto.appendChild(botonnProducto);
 
     contenedorPadre.appendChild(contenedorProducto);
 

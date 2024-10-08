@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Preguntas Frecuentes</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq {
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.question {
+    cursor: pointer;
+    margin: 0;
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+}
+
+.question:hover {
+    color: #007BFF;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Preguntas Frecuentes</h1>
+    </header>
+    <main>
+        <div class="faq">
+            <h2>Información General</h2>
+            <div class="faq-item">
+                <h3 class="question">¿Qué es nuestro sitio?</h3>
+                <p class="answer">Es una plataforma que ofrece ...</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="question">¿Qué servicios ofrecemos?</h3>
+                <p class="answer">Ofrecemos ...</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>Cuenta y Registro</h2>
+            <div class="faq-item">
+                <h3 class="question">¿Cómo creo una cuenta?</h3>
+                <p class="answer">Para crear una cuenta, ...</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="question">¿Olvidé mi contraseña?</h3>
+                <p class="answer">Puedes restablecerla ...</p>
+            </div>
+        </div>
+
+        
+    </main>
+    <script>
+        document.querySelectorAll('.question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+    </script>
+</body>
+</html>
