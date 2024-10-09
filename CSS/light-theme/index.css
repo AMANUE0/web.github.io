@@ -1,0 +1,533 @@
+:root {
+    /* Colores para el tema claro */
+    --color-bg: white;
+    --color-text: black;
+    --color-link: black;
+    --color-primary: #0099FF;
+    --color-gradient-start: #4001D8;
+    --color-gradient-end: #EA00EB;
+    --color-shadow: black;
+    --color-scroll-bg: #3d3d3d;
+    --color-scroll-thumb: #000000;
+    --font-family: MabryPro-Medium, Verdana, Geneva, Tahoma, sans-serif;
+    --font-size-large: large;
+    --font-size-h2: 3.5rem;
+    --font-size-h2-small: 2rem;
+    --gap: 40px;
+    --border-radius: 20px;
+}
+
+[data-theme="dark"] {
+    /* Colores para el modo oscuro */
+    --color-bg: #000108;
+    --color-text: white;
+    --color-link: white;
+    --color-primary: #0099FF;
+    --color-gradient-start: #EA00EB;
+    --color-gradient-end: #4001D8;
+    --color-scroll-bg: rgb(100, 100, 100);
+    --color-scroll-thumb: rgb(150, 150, 150);
+    --color-shadow: rgba(255, 255, 255, 0.5); /* Cambia el color de la sombra en modo oscuro */
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    margin: 0;
+    color: var(--color-text);
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    font-weight: 900;
+}
+
+img {
+    display: block;
+}
+
+p {
+    
+    font-size: var(--font-size-large);
+}
+
+/* Header */
+header {
+    background-color: var(--color-bg);
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 1000000; /* Aseguramos que el header esté por encima de otros elementos */
+    font-weight: 700;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+}
+
+header a {
+    color: black;
+    font-weight: bold;
+    transition: color 0.5s ease, transform 0.5s ease; /* Animar color y tamaño */
+    color: var(--color-link);
+
+}
+
+header a:hover {
+    color: gray;
+    transform: scale(1.2); /* Aumenta el tamaño suavemente */
+}
+
+/* Botones y temas */
+.login {
+    color: var(--color-link);
+    padding: 15px 20px;
+    box-shadow: 0 0 2px;
+    border-radius: 100px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Añadir transición para el fondo y sombra */
+}
+
+.login:hover {
+    background-color: #741FF5;
+}
+
+.tema {
+    color: var(--color-link);
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0;
+    font-size: 2.5rem;
+    transition: transform 0.5s ease, color 0.5s ease; /* Añadir transición para transformación y color */
+}
+
+.tema:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Suavizar el aumento de tamaño */
+}
+
+.logo {
+    transition: transform 0.5s ease; /* Suavizar la transición al hacer hover en el logo */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el logo al hacer hover */
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.hero-seccion1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    margin-bottom: 50px;
+}
+
+.hero-seccion1 h1 {
+    margin: 0;
+    font-size: 4rem;
+}
+
+.parrafo {
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.boton1 {
+    display: flex;
+    margin: 25px auto 0;
+}
+
+.boton1 a {
+    background: linear-gradient(45deg, #3E01D8, #9701D0, #E800EB);
+    padding: 15px 50px;
+    border-radius: 100px;
+    font-weight: 900;
+}
+
+.boton2 img {
+    margin-top: 20px;
+    width: 300px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.hero-seccion2 {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .hero {
+        margin: 20px;
+    }
+
+    .hero section { /*Configuracion global de las secciones del hero*/
+        margin: 10px auto 0;
+    }
+
+    .hero section:first-child {
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero section:nth-child(2) {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedor {
+        width: 100vw;
+    }
+
+    .contenedor section h2 {
+        font-size: 2rem;
+        margin: 0 auto;
+    }
+
+    .hero {
+        margin: 0;
+    }
+
+    .hero section:first-child {
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero section:first-child h1 {
+        font-size: 3rem;
+    }
+
+    .hero section:nth-child(2) {
+        width: 100vw;
+    }
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sección de aplicaciones de tendencia */
+.aplicaciones-tendencia {
+    background-color: var(--color-primary);
+    margin: 0;
+}
+
+.contenedor-aplicaciones-tendencia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: center;
+}
+
+.ver-aplicaciones {
+    box-shadow: 0 0 1px var(--color-link);
+    border-radius: 100px;
+    padding: 20px;
+    width: 270px;
+    text-align: center;
+    margin: 100px auto 0;
+    display: block;
+    background: linear-gradient(20deg, var(--color-gradient-start), var(--color-gradient-end));
+}
+
+/* Sección de justificación */
+.contenedor .Justificacion h2:first-child {
+    font-size: var(--font-size-h2);
+    text-align: center;
+}
+
+svg {
+    display: block;
+    margin: 0;
+    border: 0;
+    box-shadow: 0;
+}
+
+.divicion,
+.divicionTerminada {
+    overflow: hidden;
+    background-color: var(--color-bg);
+}
+
+.aplicaciones-tendencia h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+    padding-bottom: 100px;
+}
+
+.Justificacion {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.Justificacion-seccion {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    justify-content: space-between;
+}
+
+.cuadro-1,
+.cuadro-2,
+.cuadro-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    padding: 10px;
+    margin: 15px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--color-shadow);
+    color: var(--color-text);
+    & i { font-size: 3rem;}
+}
+
+.cuadro-1 { align-self: flex-start; }
+.cuadro-2 { align-self: center; }
+.cuadro-3 { align-self: flex-end; }
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    margin: 50px 0 0 0;
+    align-items: center;
+    font-weight: 900;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.footer-iconos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-iconos i {
+    color: var(--color-text);
+    font-size: 1.4rem;
+}
+
+.footer-texto {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer-texto a {
+    color: var(--color-text);
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    width: 10px; /* Width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color-scroll-bg); /* Color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-scroll-thumb); /* Color of the scroll thumb */
+    border-radius: 20px; /* Roundness of the scroll thumb */
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    .Justificacion-seccion {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .cuadro-1,
+    .cuadro-2,
+    .cuadro-3 {
+        text-align: center;
+    }
+
+    .contenedor .Justificacion h2:first-child {
+        font-size: var(--font-size-h2-small);
+        text-align: center;
+    }
+}
+
+/* Clases de diseño */
+.texto-degradado {
+    background: linear-gradient(45deg, #3E00FA, #C601CC);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.icono-degradado {
+    background: linear-gradient(#3E00FA, #C601CC, rgb(65, 49, 85));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.texto-degradado-celeste {
+    background: linear-gradient(45deg, #005791, rgb(135, 0, 153), gray);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Cartas */
+.cartas {
+    position: relative;
+    display: flex;
+    margin: 0;
+}
+
+.card1,
+.card2,
+.card3 {
+    width: 280px;
+    height: 350px;
+    background-color: #111720;
+    border-radius: 15px;
+    transition: .5s;
+    margin: 20px;
+    color: white;
+    box-shadow: 0 0 20px black;
+}
+
+.contenedorIMG1,
+.contenedorIMG2,
+.contenedorIMG3 {
+    position: relative;
+    width: 100%;
+    height: 160px;
+}
+
+.appImg1,
+.appImg2,
+.appImg3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.botonDescarga {
+    margin: 5px 0;
+    box-shadow: 0 0 2px white;
+    border-radius: 100px;
+    padding: 10px 20px;
+}
+
+.botonDescarga:hover {
+    cursor: pointer;
+    background-color: #741FF5;
+}
+
+.contenedorINFO {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    box-shadow: none;
+    transform: scale(1.1);
+}
+
+.contenidoTrasero {
+    position: absolute;
+    background-color: brown;
+}   
+
+@media (max-width: 500px) {
+    .cartas {
+        flex-direction: column;
+    }
+}
+
+/* Equipo */
+.equipo {
+    background-color: #5000CA;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contenedor-integrante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    max-width: 350px;
+    text-align: center;
+    padding: 50px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.contenedorImagen {
+    box-shadow: 0 0 2px white;
+    border-radius: 15px;
+}
+
+.imagenEquipo {
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 0 15px black;
+    width: 150px;
+}
+
+#titulo-equipo {
+    display: flex;
+    align-items: center;
+    color: white;
+}

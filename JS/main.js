@@ -175,3 +175,22 @@ function equipo (nombreI, imagenI) {
 equipo("NORIs", "imagenes/card1.jpg");
 equipo(`Manuel ${iconos.gamepad}`, "imagenes/logo.png");
 equipo("Alexander", "imagenes/logo.png");
+const temaButton = document.querySelector('.tema');
+
+let currentTheme = localStorage.getItem('theme') || 'light';
+document.body.setAttribute('data-theme', currentTheme);
+
+temaButton.addEventListener('click', () => {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.body.setAttribute('data-theme', currentTheme);
+
+    
+    if (currentTheme === 'dark') {
+        temaButton.innerHTML = '<i class="fa-solid fa-sun"></i>'; // Ícono de sol para modo oscuro
+    } else {
+        temaButton.innerHTML = '<i class="fa-solid fa-moon"></i>'; // Ícono de luna para modo claro
+    }
+
+
+    localStorage.setItem('theme', currentTheme);
+});
