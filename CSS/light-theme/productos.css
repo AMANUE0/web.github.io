@@ -1,3 +1,165 @@
+:root {
+    /* Colores para el tema claro */
+    --color-bg: white;
+    --color-bg-cartas: #111720;
+    --color-text: black;
+    --color-link: black;
+    --color-primary: #0099FF;
+    --color-gradient-start: #4001D8;
+    --color-gradient-end: #EA00EB;
+    --color-shadow: black;
+    --color-scroll-bg: #3d3d3d;
+    --color-scroll-thumb: #000000;
+    --font-family: MabryPro-Medium, Verdana, Geneva, Tahoma, sans-serif;
+    --font-size-large: large;
+    --font-size-h2: 3.5rem;
+    --font-size-h2-small: 2rem;
+    --gap: 40px;
+    --border-radius: 20px;
+}
+
+[data-theme="dark"] {
+    /* Colores para el modo oscuro */
+    --color-bg: #000108;
+    --color-bg-cartas: rgb(3, 0, 14);
+    --color-text: white;
+    --color-link: white;
+    --color-primary: #0099FF;
+    --color-gradient-start: #EA00EB;
+    --color-gradient-end: #4001D8;
+    --color-scroll-bg: rgb(100, 100, 100);
+    --color-scroll-thumb: rgb(150, 150, 150);
+    --color-shadow: rgba(255, 255, 255, 0.5); /* Cambia el color de la sombra en modo oscuro */
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    margin: 0;
+    color: var(--color-text);
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    font-weight: 900;
+}
+
+img {
+    display: block;
+}
+
+p {
+    
+    font-size: var(--font-size-large);
+}
+
+/* Header */
+header {
+    background-color: var(--color-bg);
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 1000000; /* Aseguramos que el header esté por encima de otros elementos */
+    font-weight: 700;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+}
+
+header a {
+    color: black;
+    font-weight: bold;
+    transition: color 0.5s ease, transform 0.5s ease; /* Animar color y tamaño */
+    color: var(--color-link);
+
+}
+
+header a:hover {
+    color: gray;
+    transform: scale(1.2); /* Aumenta el tamaño suavemente */
+}
+
+/* Botones y temas */
+.login {
+    font-weight: 900;
+    color: var(--color-link);
+    padding: 15px 20px;
+    box-shadow: 0 0 2px;
+    border-radius: 100px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Añadir transición para el fondo y sombra */
+}
+
+.login:hover {
+    font-weight: 900;
+    cursor: pointer;
+    background-color: #741FF5;
+}
+
+.tema {
+    color: var(--color-link);
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0;
+    font-size: 2.5rem;
+    transition: transform 0.5s ease, color 0.5s ease; /* Añadir transición para transformación y color */
+}
+
+.tema:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Suavizar el aumento de tamaño */
+}
+
+.logo {
+    transition: transform 0.5s ease; /* Suavizar la transición al hacer hover en el logo */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el logo al hacer hover */
+}
+
+.contenedor-busqueda {
+}
+.barra-busqueda {
+    background-color:  var(--color-bg);
+    height: 45px;
+    padding: 5px 10px;
+    width: 200px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid gray;
+    outline: none;
+    transition: width .5s;
+}
+
+.barra-busqueda:focus {
+    width: 300px;
+    height: 400px;
+}
+.contenedorProducto {
+    width: 300px;
+    background-color: blue;
+}
+.imagenProducto {
+    width: 300px;
+}
 header {
     max-width: 1600px;
 }
@@ -14,7 +176,6 @@ header {
     margin: 0 20px 0 0;
 }
 .productos {
-    background-color: #969696;
     margin: 10px;
     border-radius: 20px;
     width: 100%;
@@ -26,9 +187,9 @@ header {
 .contenedorProducto {
     position: relative;
     display: flex;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px var(--color-shadow);
     border-radius: 5px;
-    background-color: white;
+    background-color: var(--color-bg);
     width: 240px;
     max-width: 300px;
     height: auto;
@@ -38,7 +199,7 @@ header {
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
-    color: black; /*3f75ff;*/
+    color: var(--color-text); /*3f75ff;*/
     text-decoration: none;
     margin: 5px auto;
 }
@@ -66,7 +227,7 @@ header {
 
 }
 .botonProducto {
-    background-color: #298DFD;
+    background-color: var(--color-primary);
     padding: 20px;
     border-radius: 15px;
     margin: 5px;

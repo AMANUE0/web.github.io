@@ -73,3 +73,22 @@ crearProducto("imagenes/card2.webp", "Minecraft Mod", "Minecraft", "Es un juego 
 crearProducto("imagenes/hero.jpg", "Minecraft Mod", "Minecraft", "Es un juego tal tal tla lkj fñlk jdaskkdj asñldk jasñlkdj ñaslkdj", "$ 1000", "Mas imformacion", "https://youtube.com");
 crearProducto("imagenes/logo.png", "Minecraft Mod", "Minecraft", "Es un juego tal tal tla lkj fñlk jdaskkdj asñldk jasñlkdj ñaslkdj", "$ 1000", "Mas imformacion", "https://youtube.com");
 crearProducto("imagenes/logo.png", "Minecraft Mod", "Minecraft", "Es un juego tal tal tla lkj fñlk jdaskkdj asñldk jasñlkdj ñaslkdj", "$ 1000", "Mas imformacion", "https://youtube.com");
+const temaButton = document.querySelector('.tema');
+
+let currentTheme = localStorage.getItem('theme') || 'light';
+document.body.setAttribute('data-theme', currentTheme);
+
+temaButton.addEventListener('click', () => {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.body.setAttribute('data-theme', currentTheme);
+
+    
+    if (currentTheme === 'dark') {
+        temaButton.innerHTML = '<i class="fa-solid fa-sun"></i>'; // Ícono de sol para modo oscuro
+    } else {
+        temaButton.innerHTML = '<i class="fa-solid fa-moon"></i>'; // Ícono de luna para modo claro
+    }
+
+
+    localStorage.setItem('theme', currentTheme);
+});
